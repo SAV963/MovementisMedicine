@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Move | Endurance Training</title>
+  <meta name="description" content="Move helps athletes train for triathlon, 5K, 10K, half marathon, marathon, and ultramarathon events." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">Move</div>
+      <a class="nav-button" href="#planner">Start Training</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">Train with purpose</p>
+      <h1>Move your training forward.</h1>
+      <p class="hero-text">
+        One place to plan, track, and stay accountable for triathlon and endurance racing.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#planner">Start Training</a>
+        <a class="button secondary" href="#events">See Training Options</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="planner">
+      <div class="section-header">
+        <p class="eyebrow">Training Planner</p>
+        <h2>Choose your goal</h2>
+        <p>Pick an event and see a simple training focus plus a live countdown to race day.</p>
+      </div>
+
+      <div class="card planner-card">
+        <label for="eventType">Event</label>
+        <select id="eventType">
+          <option value="Sprint Triathlon">Sprint Triathlon</option>
+          <option value="Olympic Triathlon">Olympic Triathlon</option>
+          <option value="70.3 Triathlon">70.3 Triathlon</option>
+          <option value="Ironman">Ironman</option>
+          <option value="5K">5K</option>
+          <option value="10K">10K</option>
+          <option value="Half Marathon">Half Marathon</option>
+          <option value="Marathon">Marathon</option>
+          <option value="Ultramarathon">Ultramarathon</option>
+        </select>
+
+        <label for="raceDate">Race Date</label>
+        <input type="date" id="raceDate" />
+
+        <button class="button primary full" id="generatePlan">Generate Plan</button>
+
+        <div class="result" id="planResult">
+          <h3>Your training summary</h3>
+          <p>Select an event and date to generate your plan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="events">
+      <div class="section-header">
+        <p class="eyebrow">Supported Goals</p>
+        <h2>Built for endurance athletes</h2>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Triathlon</h3>
+          <p>Sprint, Olympic, 70.3, and Ironman planning with swim, bike, and run focus.</p>
+        </article>
+        <article class="card">
+          <h3>Road Racing</h3>
+          <p>5K, 10K, half marathon, and marathon progression with pacing and consistency.</p>
+        </article>
+        <article class="card">
+          <h3>Ultra Training</h3>
+          <p>Long-run emphasis, durability, fueling practice, and race-specific preparation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="log">
+      <div class="section-header">
+        <p class="eyebrow">Race Log</p>
+        <h2>Document your races</h2>
+        <p>Keep a record of your event, date, and finish time.</p>
+      </div>
+
+      <div class="card race-log-card">
+        <div class="form-grid">
+          <div>
+            <label for="raceName">Race Name</label>
+            <input type="text" id="raceName" placeholder="Boise Half Marathon" />
+          </div>
+          <div>
+            <label for="raceDistance">Distance / Type</label>
+            <input type="text" id="raceDistance" placeholder="Half Marathon" />
+          </div>
+          <div>
+            <label for="raceLogDate">Date</label>
+            <input type="date" id="raceLogDate" />
+          </div>
+          <div>
+            <label for="raceTime">Finish Time</label>
+            <input type="text" id="raceTime" placeholder="1:32:14" />
+          </div>
+        </div>
+
+        <button class="button primary full" id="saveRace">Save Race</button>
+
+        <div class="saved-races">
+          <h3>Saved Races</h3>
+          <ul id="raceList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="countdown">
+      <div class="section-header">
+        <p class="eyebrow">Countdown</p>
+        <h2>Keep your next race in sight</h2>
+      </div>
+
+      <div class="card countdown-card">
+        <p class="countdown-label">Next race countdown</p>
+        <div class="countdown-value" id="countdownValue">No race selected yet</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Move © 2026 • Endurance training made simple.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
